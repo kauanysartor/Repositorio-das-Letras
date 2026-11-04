@@ -3,6 +3,7 @@
 Back-end de um sistema de gestão de biblioteca, construído com arquitetura de microsserviços.
 
 **Disciplina:** Arquitetura de Software | Engenharia de Software | Centro Universitário SATC
+
 **Professor:** Eduardo Cizeski Meneghel
 
 **Avaliação:** Sistemas distribuídos
