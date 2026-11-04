@@ -5,7 +5,7 @@ Back-end de um sistema de gestão de biblioteca, construído com arquitetura de 
 **Disciplina:** Arquitetura de Software | Engenharia de Software | Centro Universitário SATC
 **Professor:** Eduardo Cizeski Meneghel
 **Avaliação:** Sistemas distribuídos
-**Equipe:** _(nome do aluno 1)_, _(nome do aluno 2)_, _(nome do aluno 3)_
+**Equipe:** _ALEXSANDER ANTUNES BARBOSA_, _KAUANY HAHN SARTOR_, _RAFAELLA DE SOUZA BENEDET_
 
 **Links**
 - Aplicação no Render: _(colar link)_
