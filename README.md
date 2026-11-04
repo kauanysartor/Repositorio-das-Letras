@@ -120,13 +120,6 @@ A aplicação é composta por **4 microsserviços independentes**, todos baseado
 
 ---
 
-## 3. Como executar localmente
-
-1. Clonar o repositório.
-2. Em cada pasta de serviço (`livros`, `leitores`, `emprestimos`, `multas`), executar `dotnet run`.
-3. Conferir nos arquivos `appsettings.json` de **Empréstimos** e **Multas** as URLs dos serviços de destino (por padrão, `http://localhost:5001` e `http://localhost:5002`).
-4. Testar pelas rotas do Swagger de cada serviço.
-
 ## 4. Estrutura do repositório
 
 ```
