@@ -7,9 +7,6 @@ Back-end de um sistema de gestão de biblioteca, construído com arquitetura de 
 **Avaliação:** Sistemas distribuídos
 **Equipe:** _ALEXSANDER ANTUNES BARBOSA_, _KAUANY HAHN SARTOR_, _RAFAELLA DE SOUZA BENEDET_
 
-**Links**
-- Aplicação no Render: _(colar link)_
-- Repositório: _(colar link do GitHub)_
 
 ---
 
