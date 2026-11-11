@@ -126,7 +126,7 @@ Cada serviço de origem possui uma classe cliente (`LeitorClient`, `LivroClient`
 
 ### 2.4 Tecnologias
 
-- .NET 10 (template da disciplina), Entity Framework Core e SQLite (um banco por microsserviço)
+- .NET 10, Entity Framework Core e SQLite (um banco por microsserviço)
 - API REST com troca de dados em JSON, documentada com Scalar (`/scalar`)
 - Comunicação entre serviços via `HttpClient`
 - Docker e publicação no Render (um Web Service por microsserviço)
