@@ -1,15 +1,14 @@
 # Repositório das Letras
 
-Back-end de um sistema de gestão de biblioteca, construído com arquitetura de microsserviços.
+Sistema de gestão de biblioteca, construído com arquitetura de microsserviços.
 
-**Disciplina:** Arquitetura de Software | Engenharia de Software | Centro Universitário SATC
+**Disciplina:** Arquitetura de Software | Engenharia de Software | SATC
+
 **Professor:** Eduardo Cizeski Meneghel
-**Avaliação:** Sistemas distribuídos
+
 **Equipe:** *ALEXSANDER ANTUNES BARBOSA*, *KAUANY HAHN SARTOR*, *RAFAELLA DE SOUZA BENEDET*
 
 **Links**
-
-- Aplicação no Render: *(colar links dos 4 serviços)*
 - Repositório: https://github.com/kauanysartor/Repositorio-das-Letras
 
 ---
@@ -63,7 +62,7 @@ O **Repositório das Letras** organiza o funcionamento de uma biblioteca: manté
 
 ### 2.1 Microsserviços
 
-A aplicação é composta por **4 microsserviços independentes**, todos criados a partir do template de microsserviço da disciplina (.NET, SQLite, REST). Cada serviço tem seu próprio banco de dados SQLite e se comunica com os demais somente por requisições HTTP REST, nunca acessando o banco de outro serviço.
+A aplicação é composta por **4 microsserviços independentes**. Cada serviço tem seu próprio banco de dados SQLite e se comunica com os demais somente por requisições HTTP REST.
 
 | Microsserviço   | Função                                                                                                  | Porta local |
 |-----------------|---------------------------------------------------------------------------------------------------------|-------------|
