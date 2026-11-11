@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="livros/AppTemplate/LivrosApp.csproj" />
+  <Project Path="leitores/AppTemplate/LeitoresApp.csproj" />
+  <Project Path="emprestimos/AppTemplate/EmprestimosApp.csproj" />
+  <Project Path="multas/AppTemplate/MultasApp.csproj" />
+</Solution>
