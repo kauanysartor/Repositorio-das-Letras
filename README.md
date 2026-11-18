@@ -9,7 +9,11 @@ Sistema de gestão de biblioteca, construído com arquitetura de microsserviços
 **Equipe:** *ALEXSANDER ANTUNES BARBOSA*, *KAUANY HAHN SARTOR*, *RAFAELLA DE SOUZA BENEDET*
 
 **Links**
-- Repositório: https://github.com/kauanysartor/Repositorio-das-Letras
+- Repositório principal (documentação): https://github.com/kauanysartor/Repositorio-das-Letras
+- Microsserviço de Livros: https://github.com/alexsanderantunesbarbosa/rdl-livros
+- Microsserviço de Leitores: https://github.com/alexsanderantunesbarbosa/rdl-leitores
+- Microsserviço de Empréstimos: https://github.com/alexsanderantunesbarbosa/rdl-emprestimos
+- Microsserviço de Multas: https://github.com/alexsanderantunesbarbosa/rdl-multas
 
 ---
 
@@ -62,7 +66,7 @@ O **Repositório das Letras** organiza o funcionamento de uma biblioteca: manté
 
 ### 2.1 Microsserviços
 
-A aplicação é composta por **4 microsserviços independentes**. Cada serviço tem seu próprio banco de dados SQLite e se comunica com os demais somente por requisições HTTP REST.
+A aplicação é composta por **4 microsserviços independentes**. Cada serviço tem seu próprio repositório, seu próprio banco de dados SQLite e se comunica com os demais somente por requisições HTTP REST.
 
 | Microsserviço   | Função                                                                                                  | Porta local |
 |-----------------|---------------------------------------------------------------------------------------------------------|-------------|
@@ -130,25 +134,25 @@ Cada serviço de origem possui uma classe cliente (`LeitorClient`, `LivroClient`
 - API REST com troca de dados em JSON, documentada com Scalar (`/scalar`)
 - Comunicação entre serviços via `HttpClient`
 - Docker e publicação no Render (um Web Service por microsserviço)
-- Código-fonte no GitHub
+- Código-fonte no GitHub, um repositório por microsserviço
 
 ---
 
 ## 3. Como executar localmente
 
-1. Clonar o repositório.
-2. Em cada pasta de serviço (`livros`, `leitores`, `emprestimos`, `multas`), entrar na pasta `AppTemplate` e executar `dotnet run` (um terminal por serviço). Subir Livros e Leitores antes de Empréstimos e Multas.
+1. Clonar os 4 repositórios dos microsserviços (links no topo deste README).
+2. Em cada repositório, entrar na pasta `AppTemplate` e executar `dotnet run` (um terminal por serviço). Subir Livros e Leitores antes de Empréstimos e Multas.
 3. Conferir nos arquivos `appsettings.json` de **Empréstimos** (`LivrosUrl` e `LeitoresUrl`) e **Multas** (`LeitoresUrl`) as URLs dos serviços de destino. Por padrão: `http://localhost:5001` (Livros) e `http://localhost:5002` (Leitores).
 4. Testar pelas rotas do Scalar de cada serviço, em `http://localhost:<porta>/scalar`.
 
-## 4. Estrutura do repositório
+## 4. Estrutura dos repositórios
 
-```
-/livros
-/leitores
-/emprestimos
-/multas
-README.md
-```
+| Repositório                                                                 | Conteúdo                                         |
+|-----------------------------------------------------------------------------|--------------------------------------------------|
+| [Repositorio-das-Letras](https://github.com/kauanysartor/Repositorio-das-Letras) | Documento de requisitos e descritivo técnico |
+| [rdl-livros](https://github.com/alexsanderantunesbarbosa/rdl-livros)           | Microsserviço de Livros                       |
+| [rdl-leitores](https://github.com/alexsanderantunesbarbosa/rdl-leitores)       | Microsserviço de Leitores                     |
+| [rdl-emprestimos](https://github.com/alexsanderantunesbarbosa/rdl-emprestimos) | Microsserviço de Empréstimos                  |
+| [rdl-multas](https://github.com/alexsanderantunesbarbosa/rdl-multas)           | Microsserviço de Multas                       |
 
-Cada pasta contém um serviço completo (solution, `Dockerfile` e o projeto em `AppTemplate/`).
+Cada repositório de microsserviço contém um serviço completo (solution, `Dockerfile` na raiz e o projeto em `AppTemplate/`), publicado no Render como um Web Service próprio.
