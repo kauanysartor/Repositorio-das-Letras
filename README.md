@@ -15,6 +15,14 @@ Sistema de gestão de biblioteca, construído com arquitetura de microsserviços
 - Microsserviço de Empréstimos: https://github.com/alexsanderantunesbarbosa/rdl-emprestimos
 - Microsserviço de Multas: https://github.com/alexsanderantunesbarbosa/rdl-multas
 
+**Aplicação publicada no Render** (documentação interativa da API de cada serviço)
+- Livros: https://rdl-livros.onrender.com/scalar
+- Leitores: https://rdl-leitores.onrender.com/scalar
+- Empréstimos: https://rdl-emprestimos.onrender.com/scalar
+- Multas: https://rdl-multas.onrender.com/scalar
+
+> Os serviços usam o plano gratuito do Render, que desliga o serviço após 15 minutos sem acesso. A primeira requisição depois disso pode levar cerca de 1 minuto. Pelo mesmo motivo, o banco SQLite de cada serviço é recriado vazio quando o serviço reinicia.
+
 ---
 
 ## 1. Documento de requisitos
@@ -102,7 +110,7 @@ A aplicação é composta por **4 microsserviços independentes**. Cada serviço
 
 Na integração 2, o serviço de Empréstimos busca o livro em Livros e compara a quantidade de exemplares com os empréstimos em aberto no seu próprio banco para saber se há exemplar disponível.
 
-Cada serviço de origem possui uma classe cliente (`LeitorClient`, `LivroClient`) que concentra as chamadas HTTP ao serviço de destino, com a URL lida do `appsettings.json` (`LeitoresUrl` e `LivrosUrl`).
+Cada serviço de origem possui uma classe cliente (`LeitorClient`, `LivroClient`) que concentra as chamadas HTTP ao serviço de destino, com a URL lida da configuração (`LeitoresUrl` e `LivrosUrl`). Localmente, os valores vêm do `appsettings.json`. No Render, vêm de variáveis de ambiente com o mesmo nome, que têm prioridade sobre o arquivo. Assim, o mesmo código roda nos dois ambientes sem alteração.
 
 ### 2.3 Endpoints principais
 
@@ -147,12 +155,12 @@ Cada serviço de origem possui uma classe cliente (`LeitorClient`, `LivroClient`
 
 ## 4. Estrutura dos repositórios
 
-| Repositório                                                                 | Conteúdo                                         |
-|-----------------------------------------------------------------------------|--------------------------------------------------|
-| [Repositorio-das-Letras](https://github.com/kauanysartor/Repositorio-das-Letras) | Documento de requisitos e descritivo técnico |
-| [rdl-livros](https://github.com/alexsanderantunesbarbosa/rdl-livros)           | Microsserviço de Livros                       |
-| [rdl-leitores](https://github.com/alexsanderantunesbarbosa/rdl-leitores)       | Microsserviço de Leitores                     |
-| [rdl-emprestimos](https://github.com/alexsanderantunesbarbosa/rdl-emprestimos) | Microsserviço de Empréstimos                  |
-| [rdl-multas](https://github.com/alexsanderantunesbarbosa/rdl-multas)           | Microsserviço de Multas                       |
+| Repositório                                                                      | Conteúdo                                     | Render                                                         |
+|----------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------------------------------|
+| [Repositorio-das-Letras](https://github.com/kauanysartor/Repositorio-das-Letras) | Documento de requisitos e descritivo técnico | -                                                              |
+| [rdl-livros](https://github.com/alexsanderantunesbarbosa/rdl-livros)             | Microsserviço de Livros                      | [rdl-livros.onrender.com](https://rdl-livros.onrender.com/scalar)           |
+| [rdl-leitores](https://github.com/alexsanderantunesbarbosa/rdl-leitores)         | Microsserviço de Leitores                    | [rdl-leitores.onrender.com](https://rdl-leitores.onrender.com/scalar)       |
+| [rdl-emprestimos](https://github.com/alexsanderantunesbarbosa/rdl-emprestimos)   | Microsserviço de Empréstimos                 | [rdl-emprestimos.onrender.com](https://rdl-emprestimos.onrender.com/scalar) |
+| [rdl-multas](https://github.com/alexsanderantunesbarbosa/rdl-multas)             | Microsserviço de Multas                      | [rdl-multas.onrender.com](https://rdl-multas.onrender.com/scalar)           |
 
 Cada repositório de microsserviço contém um serviço completo (solution, `Dockerfile` na raiz e o projeto em `AppTemplate/`), publicado no Render como um Web Service próprio.
