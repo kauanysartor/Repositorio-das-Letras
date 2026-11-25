@@ -4,3 +4,4 @@
   <Project Path="emprestimos/AppTemplate/EmprestimosApp.csproj" />
   <Project Path="multas/AppTemplate/MultasApp.csproj" />
 </Solution>
+
