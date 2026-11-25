@@ -21,8 +21,6 @@ Sistema de gestão de biblioteca, construído com arquitetura de microsserviços
 - Empréstimos: https://rdl-emprestimos.onrender.com/scalar
 - Multas: https://rdl-multas.onrender.com/scalar
 
-> Os serviços usam o plano gratuito do Render, que desliga o serviço após 15 minutos sem acesso. A primeira requisição depois disso pode levar cerca de 1 minuto. Pelo mesmo motivo, o banco SQLite de cada serviço é recriado vazio quando o serviço reinicia.
-
 ---
 
 ## 1. Documento de requisitos
